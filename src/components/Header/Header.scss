@@ -1,17 +1,16 @@
-
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/globals" as *;
 
 .header {
-    text-align: center;
-    width: 100vw;
+  text-align: center;
+  width: 100vw;
 
-    &__title{
-        height: 4rem;
-        padding: 0.625rem;
-    }
-    
+  &__title {
+    height: 4rem;
+    padding: 0.625rem;
+  }
+  
     &__subtitle{
         display: flex;
         justify-content: center;

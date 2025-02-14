@@ -1,0 +1,21 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/globals" as *;
+
+.guide-page {
+  margin: 1rem;
+
+  @include tablet {
+    margin: 2rem;
+  }
+
+  @include desktop {
+    margin: 0 auto;
+  }
+
+  &__card {
+    @include desktop {
+      width: 63.75rem;
+    }
+  }
+}
