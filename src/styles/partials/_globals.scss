@@ -1,6 +1,6 @@
 @use "variables" as *;
 @use "mixins" as *;
-@use "fonts" as *;
+@use "typography" as *;
 
 *,
 *::before,
@@ -10,14 +10,14 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background-color: $bg-white;
 }
 
 h1 {
   color: $gray;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 500;
   font-size: 1.5rem;
   line-height: 2rem;
   @include tablet {
@@ -28,13 +28,11 @@ h1 {
 
 h2 {
   color: $gray;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
   @include tablet {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.5rem;
   }
 }
 
