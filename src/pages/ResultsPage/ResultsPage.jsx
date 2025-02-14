@@ -6,6 +6,8 @@ function ResultsPage() {
   const location = useLocation();
   const recommendation = location.state?.recommendation;
 
+  console.log(recommendation);
+
   if (!recommendation) return <p>No recommendations found. Try again.</p>;
 
   return (
