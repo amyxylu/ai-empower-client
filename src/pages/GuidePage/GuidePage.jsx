@@ -5,14 +5,15 @@ import GuidePageCard from "../../components/GuidePageCard/GuidePageCard";
 import "./GuidePage.scss";
 
 function GuidePage() {
-  const { toolId } = useParams();
+  const { toolName } = useParams(); // Use toolName instead of toolId
   const [guide, setGuide] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getGuide = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/guide/${toolId}`
+          `http://localhost:8080/api/guide/${toolName}`
         );
         setGuide(response.data);
       } catch (error) {
@@ -22,13 +23,19 @@ function GuidePage() {
       }
     };
 
-    getGuide();
-  }, [toolName]);
+    if (toolName) getGuide();
+  }, [toolName]); // Depend on toolName
 
   return (
     <section className="guide-page">
       <div className="guide-page__card">
-        {guide ? <GuidePageCard guide={guide} /> : <p>Loading guide...</p>}
+        {loading ? (
+          <p>Loading guide...</p>
+        ) : guide ? (
+          <GuidePageCard guide={guide} />
+        ) : (
+          <p>Guide not found.</p>
+        )}
       </div>
     </section>
   );

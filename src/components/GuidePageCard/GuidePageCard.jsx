@@ -1,14 +1,15 @@
+import React from "react";
 import "./GuidePageCard.scss";
 
 function GuidePageCard({ guide }) {
   return (
     <article className="guide-card">
-      <img className="guide-card__logo" src={guide.logo} alt={guide.toolName} />
+      <h2 className="guide-card__header">{guide.display_name}</h2>
       <div className="guide-card__section guide-card__section--orange">
         <p className="guide-card__description">{guide.description}</p>
       </div>
       <div className="guide-card__section">
-        <h3 className="guide-card__subheader">Why Use {guide.name}?</h3>
+        <h3 className="guide-card__subheader">Why Use {guide.display_name}?</h3>
         <p className="guide-card__text">
           <strong>Problem It Solves:</strong> {guide.problem_solved}
         </p>
@@ -19,19 +20,12 @@ function GuidePageCard({ guide }) {
         <p className="guide-card__text">{guide.real_world_example}</p>
       </div>
 
-      {/* <h3 className="guide-card__subheader">How to Use {guide.name}:</h3> */}
-      {/* <ol>
-        {guide.steps.map((step, index) => (
-          <li key={index}>{step}</li>
-        ))}
-      </ol> */}
-
       <a
         href={guide.link}
         target="_blank"
         rel="noopener noreferrer"
         className="guide-card__cta-btn">
-        Try {guide.name} for Free! No Setup Required!
+        Try {guide.display_name} for Free! No Setup Required!
       </a>
 
       {guide.resources && guide.resources.length > 0 && (

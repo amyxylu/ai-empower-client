@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./ResultsPageCard.scss";
 
 function ResultsPageCard({ tool, toolId }) {
   return (
-    <article className="result-card">
+    <li className="result-card">
       <div className="result-card__logo">
         <img
           src={tool.logo_url}
@@ -25,7 +26,7 @@ function ResultsPageCard({ tool, toolId }) {
           Try {tool.tool}
         </a>
       </div>
-    </article>
+    </li>
   );
 }
 
