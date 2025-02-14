@@ -1,6 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
-
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import GuidePage from "./pages/GuidePage/GuidePage";
+import QuizPage from "./pages/QuizPage/QuizPage";
+import ResultsPage from "./pages/ResultsPage/ResultsPage";
 function App() {
   return (
     <BrowserRouter>
@@ -12,5 +15,4 @@ function App() {
     </BrowserRouter>
   );
 }
-
 export default App;
