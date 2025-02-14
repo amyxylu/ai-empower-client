@@ -1,0 +1,99 @@
+@use "../../styles/partials/variables" as *;
+.questions-container {
+    padding: 30px;
+    background-color: #eddaec;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .question {
+        font-style: italic;
+        margin-bottom: 40px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        .dropdown {
+            font-size: 16px;
+            padding: 12px 20px;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+            color: #555;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            transition: all 0.3s ease;
+            position: relative;
+            margin-top: 10px;
+            &::after {
+                content: '▼';
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 18px;
+                color: #4d90fe;
+            }
+            &:focus {
+                outline: none;
+                border-color: #4d90fe;
+                background-color: #e7f0ff;
+            }
+            &:hover {
+                border-color: #4d90fe;
+                background-color: #f0faff;
+            }
+            &:active {
+                background-color: #e7f0ff;
+            }
+            option {
+                padding: 12px;
+                font-size: 16px;
+                background-color: #fff;
+                color: #333;
+            }
+        }
+    }
+    .submit-button {
+        display: inline-block;
+        background-color: $ligth-blue;
+        color: white;
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        &:hover {
+            background-color: #357ae8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        &:active {
+            background-color: #357ae8;
+            transform: translateY(0);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        &:focus {
+            outline: none;
+            border: 2px solid #357ae8;
+        }
+    }
+}
