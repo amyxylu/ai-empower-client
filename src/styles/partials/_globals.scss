@@ -1,0 +1,14 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "fonts" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
