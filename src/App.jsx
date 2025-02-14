@@ -10,13 +10,13 @@ function App() {
     <BrowserRouter>
       <Header />
       <main>
-      <Routes>
-        <Route path="/" element={<QuizPage />} />
-        <Route path="/results/:resultsId" element={<ResultsPage />} />
-        <Route path="/guide/:toolId" element={<GuidePage />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<QuizPage />} />
+          <Route path="/results/:resultsId" element={<ResultsPage />} />
+          <Route path="/guide/:toolId" element={<GuidePage />} />
+        </Routes>
       </main>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 }
