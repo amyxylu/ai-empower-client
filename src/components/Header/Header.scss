@@ -1,0 +1,21 @@
+
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/globals" as *;
+
+.header {
+    text-align: center;
+    width: 100vw;
+
+    &__title{
+        height: 4rem;
+        padding: 0.625rem;
+    }
+    
+    &__subtitle{
+        background-color: $ligth-blue;
+        padding: 0.5rem;
+        color: $white;
+        height: 3.125rem;
+    }
+}
