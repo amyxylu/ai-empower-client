@@ -9,13 +9,10 @@
     margin: 2rem;
   }
 
-  @include desktop {
-    margin: 0 auto;
-  }
-
   &__card {
     @include desktop {
       width: 63.75rem;
+      margin: 0 auto;
     }
   }
 }

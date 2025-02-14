@@ -7,18 +7,23 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  border: 1.5px $ligth-blue solid;
+  border: 2px solid #0493b9;
   border-radius: 8px;
+  background-color: #ddeaeb;
+  padding: 1rem;
 
   @include tablet {
     width: 30%;
   }
 
   &__logo {
-    width: 5rem;
+    &-img {
+      width: 5rem;
+      border-radius: 10px;
 
-    @include tablet {
-      width: 8rem;
+      @include tablet {
+        width: 10rem;
+      }
     }
   }
 

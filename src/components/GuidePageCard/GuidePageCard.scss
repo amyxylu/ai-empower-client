@@ -6,10 +6,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1.5px solid #0493b9;
+  border: 2px solid #0493b9;
   border-radius: 8px;
   background-color: #ddeaeb;
+  padding: 1rem;
+  gap: 1rem;
 
+  &__header {
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__description {
+    color: white;
+  }
   &__logo {
     width: 5rem;
 
@@ -21,6 +31,7 @@
   &__section {
     background-color: white;
     border-radius: 6px;
+    padding: 1rem;
 
     &--orange {
       background-color: #ffa36b;
@@ -30,20 +41,42 @@
   &__cta-btn {
     background-color: #ffa36b;
     border-radius: 8px;
-    width: 5rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
   }
 
   &__resources {
     background-color: white;
+    padding: 1rem;
 
     &-list {
       display: flex;
       flex-direction: column;
+      list-style-type: none;
 
       @include tablet {
         flex-direction: row;
         justify-content: space-evenly;
       }
+    }
+
+    &-item {
+      background-color: #ddeaeb;
+      border: 1.5px solid #0493b9;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $ligth-blue;
+      font-weight: 700;
     }
   }
 }

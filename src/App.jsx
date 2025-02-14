@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<QuizPage />} />
           <Route path="/results" element={<ResultsPage />} />
-          <Route path="/guide/:toolId" element={<GuidePage />} />
+          <Route path="/guide/:toolName" element={<GuidePage />} />
         </Routes>
       </main>
       <Footer />
