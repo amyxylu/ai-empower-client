@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import GuidePageCard from "../components/GuidePageCard/GuidePageCard";
+import "./GuidePage.scss";
 
 function GuidePage() {
   const { toolId } = useParams();
@@ -11,7 +12,7 @@ function GuidePage() {
     const getGuide = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:${PORT}/api/guide/${toolId}`
+          `http://localhost:8080/api/guide/${toolId}`
         );
         setGuide(response.data);
       } catch (error) {
@@ -25,9 +26,11 @@ function GuidePage() {
   }, [toolName]);
 
   return (
-    <div className="guide-page">
-      {guide ? <GuidePageCard guide={guide} /> : <p>Loading guide...</p>}
-    </div>
+    <section className="guide-page">
+      <div className="guide-page__card">
+        {guide ? <GuidePageCard guide={guide} /> : <p>Loading guide...</p>}
+      </div>
+    </section>
   );
 }
 

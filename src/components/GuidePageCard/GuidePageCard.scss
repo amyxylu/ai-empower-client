@@ -1,3 +1,49 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/globals" as *;
+
+.guide-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1.5px solid #0493b9;
+  border-radius: 8px;
+  background-color: #ddeaeb;
+
+  &__logo {
+    width: 5rem;
+
+    @include tablet {
+      width: 8rem;
+    }
+  }
+
+  &__section {
+    background-color: white;
+    border-radius: 6px;
+
+    &--orange {
+      background-color: #ffa36b;
+    }
+  }
+
+  &__cta-btn {
+    background-color: #ffa36b;
+    border-radius: 8px;
+    width: 5rem;
+  }
+
+  &__resources {
+    background-color: white;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+
+      @include tablet {
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+    }
+  }
+}
