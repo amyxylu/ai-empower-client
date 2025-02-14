@@ -1,0 +1,18 @@
+@use "../../styles/partials/globals" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.results-contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    
+
+    &__para{
+        width:fit-content;
+        align-self: center;
+    }
+}
