@@ -13,8 +13,9 @@
 }
 
 @mixin padding-components {
-  padding: 0 16px;
+  padding: 0 12px;
   @include tablet {
-    padding: 0 2rem;
+    padding: 0 32px;
   }
 }
+
