@@ -1,33 +1,28 @@
 import React from "react";
-import axios from "axios";
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import ResultsPageCard from "../../components/ResultsPageCard/ResultsPageCard";
 
-const url = "http://localhost:8080/api/suggestions";
-
 function ResultsPage() {
-  const { resultsId } = useParams();
-  const [suggestions, setSuggestions] = useState([]);
+  const location = useLocation();
+  const recommendation = location.state?.recommendation;
 
-  const getSuggestions = async () => {
-    try {
-      const response = await axios.get(`${url}`);
-      setSuggestions = response.data;
-    } catch (error) {
-      console.error("Error in fetching suggestion", error);
-    }
-  };
-
-  useEffect(() => {
-    getSuggestions();
-  }, []);
+  if (!recommendation) return <p>No recommendations found. Try again.</p>;
 
   return (
-    <div>
-      {" "}
-      <ResultsPageCard id={resultsId} />
-    </div>
+    <section className="results-page">
+      <h1 className="results-page__header">
+        AI Tool Recommendations for {recommendation.job_title}
+      </h1>
+      <h2 className="results-page__subheader">
+        Based on your goal: <strong>{recommendation.goal}</strong>
+      </h2>
+
+      <div className="results-page__list">
+        {recommendation.suggestions.map((tool, index) => (
+          <ResultsPageCard key={index} tool={tool} />
+        ))}
+      </div>
+    </section>
   );
 }
 

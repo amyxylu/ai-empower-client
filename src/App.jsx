@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<QuizPage />} />
-        <Route path="/results/:resultsId" element={<ResultsPage />} />
+        <Route path="/results" element={<ResultsPage />} />
         <Route path="/guide/:toolId" element={<GuidePage />} />
       </Routes>
     </BrowserRouter>
