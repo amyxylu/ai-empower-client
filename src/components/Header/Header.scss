@@ -13,9 +13,13 @@
     }
     
     &__subtitle{
+        display: flex;
+        justify-content: center;
         background-color: $ligth-blue;
-        padding: 0.5rem;
-        color: $white;
-        height: 3.125rem;
+        padding: 0.6rem;
+
+        &--text{
+            color: $white;
+        }
     }
 }
