@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import GuidePage from "./pages/GuidePage/GuidePage";
@@ -7,9 +8,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<GuidePage/>} />
-        <Route path="/quizpage" element={<QuizPage/>} />
-        <Route path="/resultspage" element={<ResultsPage />} />
+        <Route path="/" element={<QuizPage />} />
+        <Route path="/results/:resultsId" element={<ResultsPage />} />
+        <Route path="/guide/:toolId" element={<GuidePage />} />
       </Routes>
     </BrowserRouter>
   );
